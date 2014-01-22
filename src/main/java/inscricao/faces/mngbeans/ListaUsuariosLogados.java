@@ -6,6 +6,7 @@
 package inscricao.faces.mngbeans;
 
 import inscricao.faces.entity.UsuarioLogado;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Vector;
 import javax.faces.bean.ApplicationScoped;
@@ -19,7 +20,9 @@ import javax.faces.model.ListDataModel;
  */
 @ManagedBean
 @ApplicationScoped
-public class ListaUsuariosLogados {
+public class ListaUsuariosLogados implements Serializable{
+    
+    private static final long serialVersionUID = 1L;
 
     private List<UsuarioLogado> lista = new Vector<>();
     

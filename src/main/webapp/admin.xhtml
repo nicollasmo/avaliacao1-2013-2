@@ -17,14 +17,15 @@
 
     <ui:define name="content">
         <h:form>
-            <h:outputText value="Usuario: "/> 
+            <h:outputText value="Usuário: "/> 
             <h:graphicImage value="imagens/usuario.png"/>
             <h:outputText value=" #{loginBean.login}"/>
             <h:outputText value=" [administrador]" rendered="#{loginBean.administrador}"/>
             <br/>
             <h:panelGroup styleClass="form-block" layout="block">
-                <h:outputText value="tabela de usuários logados"/>
+                <h:outputText value="Tabela de usuários logados"/>
             </h:panelGroup>
+            <br/>
             <h:dataTable value="#{listaUsuariosLogados.listaDM}" var="usuario"> 
                 <h:column> 
                     <f:facet name="header"> 
