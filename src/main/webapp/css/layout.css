@@ -72,6 +72,10 @@ body {
   font-weight : bold;
   text-decoration : underline;
 }
+.error { 
+    background-color: yellow;
+}
+
 
 
 

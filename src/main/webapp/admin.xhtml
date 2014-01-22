@@ -17,6 +17,31 @@
 
     <ui:define name="content">
         <h:form>
+            <h:outputText value="Usuario: "/> 
+            <h:graphicImage value="imagens/usuario.png"/>
+            <h:outputText value="#{loginBean.login}"/>
+            <h:outputText value=" [administrador]" rendered="#{loginBean.administrador}"/>
+            <h:panelGroup styleClass="form-block" layout="block">
+                <h:outputText value="tabela de usuários logados"/>
+            </h:panelGroup>
+            <h:dataTable value="#{listaUsuariosLogados.listaDM}" var="usuario"> 
+                <h:column> 
+                    <f:facet name="header"> 
+                        <h:outputText value="Nome"/> 
+                    </f:facet> 
+                    <h:outputText value="#{usuario.nome}"/> 
+                </h:column> 
+                <h:column> 
+                    <f:facet name="header"> 
+                        <h:outputText value="Horário de login"/> 
+                    </f:facet> 
+                    <h:outputText value="#{usuario.dataLogin}"/> 
+                </h:column>
+            </h:dataTable>
+            <h:panelGroup styleClass="form-block" layout="block">
+                <h:commandButton value="Login" action="login"/>
+                <h:commandButton value="Cadastro" action="cadastro"/>
+            </h:panelGroup>
         </h:form>
     </ui:define>
 
