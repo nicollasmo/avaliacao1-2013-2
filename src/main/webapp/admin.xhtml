@@ -19,8 +19,9 @@
         <h:form>
             <h:outputText value="Usuario: "/> 
             <h:graphicImage value="imagens/usuario.png"/>
-            <h:outputText value="#{loginBean.login}"/>
+            <h:outputText value=" #{loginBean.login}"/>
             <h:outputText value=" [administrador]" rendered="#{loginBean.administrador}"/>
+            <br/>
             <h:panelGroup styleClass="form-block" layout="block">
                 <h:outputText value="tabela de usuários logados"/>
             </h:panelGroup>
@@ -38,6 +39,7 @@
                     <h:outputText value="#{usuario.dataLogin}"/> 
                 </h:column>
             </h:dataTable>
+            <br/>
             <h:panelGroup styleClass="form-block" layout="block">
                 <h:commandButton value="Login" action="login"/>
                 <h:commandButton value="Cadastro" action="cadastro"/>
